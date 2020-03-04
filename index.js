@@ -3,19 +3,20 @@
 var Mortgage = require('./mortgage');
 var print = require('node-print');
 
-const currentAmount = 305763.75
+const currentAmount = 304289.75
 const originalAmount = 317925
 
 const scenarios = [
-  { name: 'New 30 year', amount: currentAmount, rolledInFees: 1500, interest: 3.6 / 100, years: 30, desiredMonthlyPayment: 3500 },
-  { name: 'New 30 year', amount: currentAmount, rolledInFees: 0, interest: 3.6 / 100, years: 30, desiredMonthlyPayment: 3500 },
-  { name: 'New 30 year', amount: currentAmount, rolledInFees: 1500, interest: 3.6 / 100, years: 30, desiredMonthlyPayment: 2100 },
-  { name: 'New 30 year', amount: currentAmount, rolledInFees: 0, interest: 3.6 / 100, years: 30, desiredMonthlyPayment: 2100 },
-  { name: 'New 30 year', amount: currentAmount, rolledInFees: 1500, interest: 3.6 / 100, years: 30, desiredMonthlyPayment: 1540.82 },
-  { name: 'New 30 year', amount: currentAmount, rolledInFees: 0, interest: 3.6 / 100, years: 30, desiredMonthlyPayment: 1540.82 },
-  { name: 'New 30 year', amount: currentAmount, rolledInFees: 1500, interest: 3.6 / 100, years: 30, desiredMonthlyPayment: null },
-  { name: 'New 30 year', amount: currentAmount, rolledInFees: 0, interest: 3.6 / 100, years: 30, desiredMonthlyPayment: null },
-  { name: 'Original 30 year', amount: originalAmount, rolledInFees: 0, interest: 4.125 / 100, years: 30, desiredMonthlyPayment: 3500 },
+  { name: 'New 15 year', amount: currentAmount, rolledInFees: 0, interest: 3.1 / 100, years: 15, desiredMonthlyPayment: null },
+  { name: 'New 30 year', amount: currentAmount, rolledInFees: 2000 + 387.50 - 550, interest: 3.5 / 100, years: 30, desiredMonthlyPayment: 3000 },
+  { name: 'New 30 year', amount: currentAmount, rolledInFees: 2000 + 387.50 - 550, interest: 3.5 / 100, years: 30, desiredMonthlyPayment: 2100 },
+  { name: 'New 30 year', amount: currentAmount, rolledInFees: 2000 + 387.50 - 550, interest: 3.5 / 100, years: 30, desiredMonthlyPayment: 1540.82 },
+  { name: 'New 30 year', amount: currentAmount, rolledInFees: 2000 + 387.50 - 550, interest: 3.5 / 100, years: 30, desiredMonthlyPayment: null },
+  { name: 'New 30 year', amount: currentAmount, rolledInFees: 387.50, interest: 3.5 / 100, years: 30, desiredMonthlyPayment: 3000 },
+  { name: 'New 30 year', amount: currentAmount, rolledInFees: 387.50, interest: 3.5 / 100, years: 30, desiredMonthlyPayment: 2100 },
+  { name: 'New 30 year', amount: currentAmount, rolledInFees: 387.50, interest: 3.5 / 100, years: 30, desiredMonthlyPayment: 1540.82 },
+  { name: 'New 30 year', amount: currentAmount, rolledInFees: 387.50, interest: 3.5 / 100, years: 30, desiredMonthlyPayment: null },
+  { name: 'Original 30 year', amount: originalAmount, rolledInFees: 0, interest: 4.125 / 100, years: 30, desiredMonthlyPayment: 3000 },
   { name: 'Original 30 year', amount: originalAmount, rolledInFees: 0, interest: 4.125 / 100, years: 30, desiredMonthlyPayment: 2100 },
   { name: 'Original 30 year', amount: originalAmount, rolledInFees: 0, interest: 4.125 / 100, years: 30, desiredMonthlyPayment: null },
 ]
